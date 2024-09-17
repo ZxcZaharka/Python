@@ -1,0 +1,27 @@
+@ex1
+integer_var = 14
+float_var = 8.8
+string_var = "мазда"
+list_var = [1, 4, 8, 7]
+tuple_var = ("фольцваген", 2, 4, "тойота")
+dict_var = {1: "ниссан", 2: "лисан"}
+set_var = {0, 4, 5, 9}
+bool_var = True
+print(integer_var, floar_var, string_var, list_var, tuple_var, dict_var, set_var, bool_var)
+
+#ex2
+name = "Захар"
+age = 17
+average_grade = 3.9
+favorite_movies = ["Зеленая миля", "Тупой еще тупее", "Типа крутые легавые"]
+personal_info (Нелеп, Каит 20, 5.0)
+skills = { "кулинария": 4, "Алхимия": 8}
+visited_countries = {"Австралия","Нигер"}
+has_driver_license = True
+
+#ex3
+proc = "intel i3"
+ram = 16
+inter_speed = 86.55
+home_pc = ["intel i3", 16, 86.55]
+print(home_pc)
