@@ -1,0 +1,31 @@
+#Задание 1
+age=int(input("Введите возраст:"))
+if age < 18:
+    print("Вы несовершеннолетний")
+elif age > 18 and age <= 65:
+    print("Вы трудоспособной человек")
+else:
+    print("Вы пенсионер")
+
+#Задание 2
+price=input("Введите стоимость:")
+pricek=float(price)
+if pricek < 1000:
+    print("Скидки не будет")
+elif pricek > 1000 and pricek <= 5000:
+    print("Скидка будет:", pricek * 0.05)
+else:
+    print("Скидка будет:", pricek * 0.01)
+
+#Задание 3
+print("Введите два числа")
+num1 = int(input("Введите число a"))
+num2 = int(input("Введите число b"))
+print ("Выберите операцию \n[1] - + \n[2] - - \n[3] - + \n[4] /")
+num = input("Введите номер вашего выбора")
+if num =="1":
+    print(num1 + num2)
+elif num == "2";
+    print(num1 - num2)
+elif num == "3";
+print
