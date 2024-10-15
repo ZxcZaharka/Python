@@ -29,3 +29,45 @@ elif num == "2";
     print(num1 - num2)
 elif num == "3";
 print
+
+#4
+num = int(input("введите число:"))
+if num %2 == 0 and num %10 == 6:
+    print(True)
+elif num %2 == 0 and num %10 == 2:
+    print(True)
+else:
+    print(False)
+ #5
+    par = ("Пароль")
+    pas = input("Введите пароль:")
+    if pas == par:
+        print("Доступ разрешен.")
+    else:
+        print("Неверный пароль!")
+#6
+blue = ("B1","B3","B7","C1","C4","C5","B6","C8","C9")
+green = ("B2","B4","B6","B8","C2","C7","C10","C11")
+pop = input("Введите координаты квадрата:")
+if pop in blue:
+    print ("в синем квадрате обитает синий попугай")
+if pop in green:
+    print ("в зеленом квадрате обитает зеленый попугай")
+else:
+    print("В данном квадрате никто не обитает ")
+#7
+num1 = int(input("Введите число n: "))
+num2 = int(input("Введите число k: "))
+if num1 % num2 == 0:
+    print(True)
+else:
+    print(False)
+#8
+name = "пудж"
+health = 666
+level= 30
+if level> 30 and health > 666:
+    print("Вы готовы к миссии!")
+    elif level
+
+    
