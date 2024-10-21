@@ -66,8 +66,33 @@ else:
 name = "пудж"
 health = 666
 level= 30
-if level> 30 and health > 666:
+if level> 30 and health > 600:
     print("Вы готовы к миссии!")
-    elif level
+elif level > 30 and health < 600 and health >700
+    print("ваше здоровье низкое,будьте осторожны.")
+elif level > 30 and health < 600:
+    print("ваше здоровье низкое для выполнения задания.")
+else:
+    print("Некорректные данные.")
+#9
+inventory = ["яблоко","шариковая ручка","фонарь","ключ"]
+if "ключ" in inventory and "фонарь" in inventory:
+    print("Вы можете пройти через дверь")
+if "ключ" not in inventory and "фонарь" not in inventory:
+    print("у вас нет ключ, ни фонаря,вы не можете пройти через дверь")
+if "ключ" not in inventory:
+    print("вы не можете открыть дверь, у вас нет ключа")
+elif"фонарь" not in inventory:
+    print("вы не можете открыть дверь,слишком темно")
+
+#10
+    king = ("Enemies are coming! are the archers ready?")
+    warrior = "For the Alliance!"
+    magician = "The spell is ready."
+    if "?" in king or "!" in warrior or "." in  warrior:
+        print("True")
+    else:
+        print("False")
+
 
     
