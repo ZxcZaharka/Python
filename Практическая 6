@@ -1,0 +1,18 @@
+#1
+name = ["Richard", "Igor", "Jonathan", "Alice", "Mary", "Bonnie"]
+for i in name:
+   pring(""Hello",i,"!"")
+
+#2
+shop = ["Laptop", "Smartphone", "Watch", "Tablet", "Headphones"]
+
+#3
+stations = ["Малиновка", "Рябиновка", "Суслово", "Дрожжино", "Звягино"]
+for i in stations
+   if f =="Звягино"
+   print (f"Поезд на станции: {i} Конечная!")
+  else:
+  print(f"поезд:"{i})
+
+#4
+shop = ["Laptop", "Smartphone", "Watch", "Tablet", "Headphones"]
