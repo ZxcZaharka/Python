@@ -1,10 +1,12 @@
 #1
 name = ["Richard", "Igor", "Jonathan", "Alice", "Mary", "Bonnie"]
 for i in name:
-   pring(""Hello",i,"!"")
+   pring("Hello",i,"!"Ы с
 
 #2
 shop = ["Laptop", "Smartphone", "Watch", "Tablet", "Headphones"]
+for i in range(10)
+    print(phrase)
 
 #3
 stations = ["Малиновка", "Рябиновка", "Суслово", "Дрожжино", "Звягино"]
@@ -12,7 +14,21 @@ for i in stations
    if f =="Звягино"
    print (f"Поезд на станции: {i} Конечная!")
   else:
-  print(f"поезд:"{i})
+     print(f"поезд:"{i})
 
 #4
 shop = ["Laptop", "Smartphone", "Watch", "Tablet", "Headphones"]
+
+for i in shop:
+   if i =="Laptop":
+      print("I'm buying this.")
+   else:
+      print("I don't need it.")
+#5
+tasks = ["Сдать проект (Важная)", "Сходить в магазин", "Позвонить врачу (Важная)", "Убраться в комнате", "Подготовить отчёт"]
+ for index, task in enumerate(tasks, start=1):
+    if "Важная" in tasks:
+   print(f"{index}: {task} !")
+else:
+   print(f"{index}: {task}")
+#6
