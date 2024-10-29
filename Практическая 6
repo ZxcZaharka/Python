@@ -1,7 +1,7 @@
 #1
 name = ["Richard", "Igor", "Jonathan", "Alice", "Mary", "Bonnie"]
 for i in name:
-   pring("Hello",i,"!"Ы с
+   print(f"Hello {x}!")
 
 #2
 shop = ["Laptop", "Smartphone", "Watch", "Tablet", "Headphones"]
@@ -32,3 +32,13 @@ tasks = ["Сдать проект (Важная)", "Сходить в магаз
 else:
    print(f"{index}: {task}")
 #6
+
+otv = 0
+abc = int(input('Введите количество чисел:'))
+for num in range(abc):
+    print('Введите сами числа:')
+    fxf = int(input())
+    otv = otv + fxf
+print('Сумма чисел = ', otv)
+
+#7
