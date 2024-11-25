@@ -1,67 +1,36 @@
 #1
 
 def create_car(brand: str, color: str, max_speed: int):
-
-return(f"Марка: (brand) Цвет: (color) Максимальная скорость: (max_speed} км/ч)
-
+   return(f"Марка: (brand) Цвет: (color) Максимальная скорость: (max_speed} км/ч)
 car_1 create_car("Lada", "Гоночный-красный", 470)
-
-\ 2 = create_car("Honda", "Серый", 180)
+car_2 = create_car("Honda", "Серый", 180)
 
 print(car_1)
-
 print(car_2)
 
 #2
-
 def switch_check(switch):
-
-if switch == True:
-
-print("True работает")
-
-elif switch == False:
-
-print("False не работает")
-
-else:
-
-print(f"(switch) сломан")
-
-switch_1 True
-
+   if switch == True:
+       print("True работает")
+       elif switch == False:
+           print("False не работает"))
+       else:
+       print(f" {switch} сломан")
+switch_1 = True
 switch_2 = False
-
-switch 3
-
-None
+switch_3 = None
 
 switch_check(switch_1)
-
 switch_check(switch_2)
-
 switch_check(switch_3)
 
 #3.1
-
 def triangle(a, b, c):
-
-if a + b a + c <= b + <= a
-
-print("Некорректные стороны. Невозможно построить треугольник.")
-
-elif a 1 = b and a \mathfrak{t} = c and b 1 = ci
-
+   if a + b <= c or a + c <= b or c + b <= a:
+      print("Некорректные стороны. Невозможно построить треугольник.")
+elif a != b and a !== c and b != c:
 print("Разносторонний треугольник")
-
-elif
-
-a ==b
-
-cor b = scz
-
+elif a == b or a = c or b==c:
 print("Равнобедренный треугольник")
-
-elif a ==b=c:
-
+elif a == b == c:
 print("Равносторонний треугольник")
