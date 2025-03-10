@@ -1,3 +1,4 @@
+#1 
 class Pers():
     def __init__(self, name, klass, hp, damage):
         self.name = name
@@ -37,4 +38,181 @@ hero.go()
 hero.start_training()
 hero.start_draka()
 hero.nazad()
+#2
+class Room:
+    def __init__(self, name):
+        self.name = name
+        self.items = []
+        self.locked = False
+        self.theme = None
 
+    def add_item(self, *items):
+        if self.locked:
+            print(f"Комната {self.name} закрыта. Нельзя добавить предметы.")
+            return
+        self.items.extend(items)
+
+    def print_items(self):
+        print(f"Все предметы в комнате {self.name}: {', '.join(self.items)}")
+
+    def del_item(self, *items):
+        if self.locked:
+            print(f"Комната {self.name} закрыта. Нельзя удалить предметы.")
+            return
+        self.items = [item for item in self.items if item not in items]
+
+    def find_item(self, item):
+        return item in self.items
+
+    def count_items(self):
+        return len(self.items)
+
+    def clear_items(self):
+        if self.locked:
+            print(f"Комната {self.name} закрыта. Нельзя очистить предметы.")
+            return
+        self.items = []
+
+    def replace_item(self, old_item, new_item):
+        if self.locked:
+            print(f"Комната {self.name} закрыта. Нельзя заменить предметы.")
+            return
+        if old_item in self.items:
+            self.items = [new_item if item == old_item else item for item in self.items]
+
+    def move_item_to(self, item, another_room):
+        if self.locked:
+            print(f"Комната {self.name} закрыта. Нельзя переместить предметы.")
+            return
+        if item in self.items:
+            self.items.remove(item)
+            another_room.add_item(item)
+
+    def rename_room(self, new_name):
+        self.name = new_name
+
+    def describe_room(self):
+        print(f"Комната: {self.name}, Предметы: {', '.join(self.items)}")
+
+    def merge_rooms(self, another_room):
+        if self.locked or another_room.locked:
+            print(f"Одна из комнат закрыта. Нельзя объединить комнаты.")
+            return
+        self.items.extend(another_room.items)
+        another_room.items = []
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def lock_room(self):
+        self.locked = True
+
+    def unlock_room(self):
+        self.locked = False
+
+    def is_locked(self):
+        return self.locked
+
+    def filter_items_by_keyword(self, keyword):
+        return [item for item in self.items if keyword in item]
+
+    def get_items_starting_with(self, letter):
+        return [item for item in self.items if item.startswith(letter)]
+
+    def count_specific_item(self, item):
+        return self.items.count(item)
+
+    def list_items_by_type(self, item_type):
+        return [item for item in self.items if item_type in item]
+
+    def add_decor(self, item):
+        if self.locked:
+            print(f"Комната {self.name} закрыта. Нельзя добавить декор.")
+            return
+        self.items.append(item)
+
+    def set_theme(self, theme):
+        self.theme = theme
+
+    def show_theme(self):
+        print(f"Тематика комнаты {self.name}: {self.theme}")
+
+# Тестирование класса
+room1 = Room("Кухня")
+room1.add_item("Холодильник", "Стул", "Стол")
+room1.print_items()
+room1.del_item("Стул")
+room1.print_items()
+
+room2 = Room("Гостиная")
+room2.add_item("Диван", "Телевизор", "Стол")
+room2.print_items()
+
+room1.move_item_to("Стол", room2)
+room1.print_items()
+room2.print_items()
+
+room1.rename_room("Столовая")
+room1.describe_room()
+
+room1.merge_rooms(room2)
+room1.print_items()
+room2.print_items()
+
+room1.lock_room()
+room1.add_item("Лампа")  # Не сработает, так как комната закрыта
+room1.unlock_room()
+room1.add_item("Лампа")
+room1.print_items()
+
+room1.set_theme("Современная")
+room1.show_theme()
+
+print(room1.filter_items_by_keyword("Стол"))
+print(room1.get_items_starting_with("Д"))
+print(room1.count_specific_item("Стол"))
+print(room1.list_items_by_type("Стол"))
+#3
+class Student:
+    def __init__(self, name, course, average_grade):
+        self.name = name
+        self.course = course
+        self.average_grade = average_grade
+
+    def show_info(self):
+        print(f"Студент: {self.name}, Курс: {self.course}, Средний балл: {self.average_grade}")
+
+    def increase_course(self):
+        if self.course < 4:
+            self.course += 1
+            print(f"{self.name} перешел на {self.course} курс.")
+        else:
+            print(f"{self.name} уже на последнем курсе.")
+
+    def add_grade(self, grade):
+        if 0 <= grade <= 10:
+            self.average_grade = (self.average_grade + grade) / 2
+            print(f"Добавлен балл {grade}. Новый средний балл: {self.average_grade:.2f}")
+        else:
+            print("Некорректный балл. Балл должен быть от 0 до 10.")
+
+    def is_scholarship_eligible(self):
+        if self.average_grade >= 8.5:
+            print(f"{self.name} имеет право на стипендию.")
+            return True
+        else:
+            print(f"{self.name} не имеет права на стипендию.")
+            return False
+
+# Пример работы программы
+student1 = Student("Иван Иванов", 2, 8.7)
+student1.show_info()
+student1.increase_course()
+student1.add_grade(9)
+student1.is_scholarship_eligible()
+
+student2 = Student("Анна Петрова", 3, 7.8)
+student2.show_info()
+student2.increase_course()
+student2.add_grade(8.5)
+student2.is_scholarship_eligible()
