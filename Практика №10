@@ -7,7 +7,7 @@ def upper(t: str) -> str:
     return out
 
 
-print(upper("PrIVet MenYA ZoVyt ZebRRRRa"))
+print(upper("VVVVV"))
 
 
 # 2
@@ -20,7 +20,7 @@ def punct(txt: str) -> int:
     return out
 
 
-print(punct("(Как дела, друг?)"))
+print(punct("как дела?)"))
 
 
 # 3
